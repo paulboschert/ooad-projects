@@ -1,0 +1,5 @@
+
+public class Media {
+  public setRandomStartPosition();
+  public restart();
+}

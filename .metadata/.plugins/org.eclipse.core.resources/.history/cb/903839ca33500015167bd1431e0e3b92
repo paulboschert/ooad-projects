@@ -1,0 +1,36 @@
+
+public class Book {
+
+  private String title;
+  private int pageCount;
+  private int currentPage;
+  public Book(String title, int totalPages) {
+    this.title = title;
+    this.pageCount = totalPages;
+    this.toString();
+  }
+
+  public void setPage(int page) {
+    this.currentPage = page;
+    System.out.println("Current Page: " + this.currentPage);
+  }
+  public void nextPage() {
+    setPage(this.currentPage + 1);
+  }
+  public String toString() {
+    return "Book Name: " + this.title + "\n" +
+           "Total Pages: " + this.pageCount "\n";
+  }
+  /**
+   * @param args
+   */
+  public static void main(String[] args) {
+    Book javabook = new Book("Java Rules", 303);
+    javabook.setPage(225);
+    javabook.nextPage();
+    javabook.setPage(600);
+    javabook.nextPage();
+
+  }
+
+}

@@ -1,0 +1,23 @@
+
+public class PetRecord {
+	
+	private String name;
+	private int age = 0;
+	public PetRecord(String initName, initAge) {
+		name = initName;
+		if(initAge < 0) {
+			System.out.println("Error");
+		} else {
+			age = initAge;
+		}
+	}
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

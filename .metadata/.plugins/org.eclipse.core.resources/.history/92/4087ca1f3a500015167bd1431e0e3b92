@@ -1,0 +1,33 @@
+
+public class Textbook extends Book implements Media {
+
+  public String gradeLevel;
+  
+  public Textbook(String title, int totalPages, String gradeLevel) {
+    super(title, totalPages);
+    this.gradeLevel = gradeLevel;
+  }
+  
+  /**
+   * @return the gradeLevel
+   */
+  public String getGradeLevel() {
+    return gradeLevel;
+  }
+
+  /**
+   * @param gradeLevel the gradeLevel to set
+   */
+  public void setGradeLevel(String gradeLevel) {
+    this.gradeLevel = gradeLevel;
+  }
+
+  /**
+   * @param args
+   */
+  public static void main(String[] args) {
+    // TODO Auto-generated method stub
+
+  }
+
+}
