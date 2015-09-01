@@ -11,14 +11,24 @@ class Book extends Media {
   }
 
   public String toString() {
-    return getTitle() + " by " + getAuthor();
+    return getTitle() + " by " + getAuthor() + " [Book]";
   }
 
-  @Override
-  public int compareTo(Book book) {
-    if(author.compareTo(book.getAuthor()) == 0)
-      return this.title.compareTo(book.getTitle());
-    else
-      return author.compareTo(book.getAuthor());
+  public int compareTo(Media media) {
+    // if media isn't an instance of Book, sort this after
+    if (!(media instanceof Book)) {
+      return 1;
+    }
+
+    // otherwise, cast to a Book and do a better comparison
+    Book book = (Book) media;
+
+    // if the titles are the same, use the author to sort
+    int compVal = this.title.compareTo(book.getTitle());
+    if (compVal != 0) {
+      return compVal;
+    } else {
+      return this.getAuthor().compareTo(book.getAuthor());
+    }
   }
 }

@@ -1,12 +1,12 @@
 class DVD extends Media {
-  private int year;
+  private Integer year;
 
   public DVD(String title, int year) {
     this.title = title;
-    this.year = year;
+    this.year = new Integer(year);
   }
 
-  public int getYear() {
+  public Integer getYear() {
     return year;
   }
 
@@ -15,14 +15,21 @@ class DVD extends Media {
     return year + ": " + title + " [DVD]";
   }
 
-  @Override
-  public int compareTo(DVD dvd) {
-    System.out.println("this.year: " + this.year + ", dvd.getYear(): " + dvd.getYear()); 
-    if(this.getYear() > dvd.getYear())
+  public int compareTo(Media media) {
+    // if media isn't an instance of DVD, sort this before
+    if(!(media instanceof DVD)) {
       return -1;
-    else if (this.getYear() < dvd.getYear())
-      return 1;
-    else
-      return this.title.compareTo(dvd.getTitle());
+    }
+ 
+    // otherwise, cast to a DVD and do a better comparison
+    DVD dvd = (DVD) media;
+    
+    // if the titles are the same, use the year to sort
+    int compVal = this.title.compareTo(dvd.getTitle());
+    if(compVal != 0) {
+      return compVal;
+    } else {
+      return this.getYear().compareTo(dvd.getYear());
+    }
   }
 }

@@ -1,3 +1,0 @@
-1) 'implements Comparable<Object>' should be added to the Media abstract class.  For example, 'abstract class Media implements Comparable<Object>'.  It should be done on the Media abstract class instead of the classes that extend Media because of the code in Driver, 'Collections.sort(library);'.  library is of type Media, so it needs to implemented Comparable.
-
-2) 
