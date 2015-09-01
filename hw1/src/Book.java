@@ -14,6 +14,7 @@ class Book extends Media {
     return getTitle() + " by " + getAuthor();
   }
 
+  @Override
   public int compareTo(Book book) {
     if(author.compareTo(book.getAuthor()) == 0)
       return this.title.compareTo(book.getTitle());

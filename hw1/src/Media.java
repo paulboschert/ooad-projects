@@ -10,4 +10,14 @@ abstract class Media implements Comparable<Media> {
     System.out.println(media.getClass());
     return this.title.compareTo(media.getTitle());
   }
+
+  public int compareTo(DVD dvd) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
+
+  public int compareTo(Book book) {
+    // TODO Auto-generated method stub
+    return 0;
+  }
 }

@@ -15,6 +15,7 @@ class DVD extends Media {
     return year + ": " + title + " [DVD]";
   }
 
+  @Override
   public int compareTo(DVD dvd) {
     System.out.println("this.year: " + this.year + ", dvd.getYear(): " + dvd.getYear()); 
     if(this.getYear() > dvd.getYear())
