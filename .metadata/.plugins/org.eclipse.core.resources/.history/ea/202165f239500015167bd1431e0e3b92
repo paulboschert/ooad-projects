@@ -1,5 +1,0 @@
-
-public interface Media {
-  public setRandomStartPosition();
-  public restart();
-}

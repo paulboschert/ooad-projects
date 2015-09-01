@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+/storage/school/CUBoulder/courses/Object Oriented Analysis and Design/workspace/.metadata/.plugins/org.eclipse.jdt.core
-3319460108.index
-2926646759.index
