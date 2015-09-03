@@ -1,24 +1,26 @@
 class DVD extends Media {
   private Integer year;
+  private final Integer SORT_KEY = 10;
 
   public DVD(String title, int year) {
     this.title = title;
     this.year = new Integer(year);
+    this.sortKey = SORT_KEY;
   }
 
-  public Integer getYear() {
+  public final Integer getYear() {
     return year;
   }
 
   @Override
-  public String toString() {
+  public final String toString() {
     return year + ": " + title + " [DVD]";
   }
 
-  public int compareTo(Media media) {
+  public final int compareTo(Media media) {
     // if media isn't an instance of DVD, sort this before
     if(!(media instanceof DVD)) {
-      return -1;
+      return this.getSortKey().compareTo(media.getSortKey());
     }
  
     // otherwise, cast to a DVD and do a better comparison
