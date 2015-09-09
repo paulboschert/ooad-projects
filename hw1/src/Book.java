@@ -3,9 +3,9 @@ class Book extends Media {
   private final Integer SORT_KEY = 20;
 
   public Book(String title, String author) {
+    super.setSortKey(SORT_KEY);
     this.title = title;
     this.author = author;
-    this.sortKey = SORT_KEY;
   }
 
   public final String getAuthor() {

@@ -15,6 +15,7 @@ public class Driver {
     library.add(new Book("Dare to go Solo", "Wise Travelguy"));
     library.add(new Book("Intro to Programming with Java Applets",
         "Elizabeth Boe"));
+    
     Collections.sort(library);
     for (Object media : library)
       System.out.println(media);

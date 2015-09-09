@@ -3,9 +3,9 @@ class DVD extends Media {
   private final Integer SORT_KEY = 10;
 
   public DVD(String title, int year) {
+    super.setSortKey(SORT_KEY);
     this.title = title;
     this.year = new Integer(year);
-    this.sortKey = SORT_KEY;
   }
 
   public final Integer getYear() {

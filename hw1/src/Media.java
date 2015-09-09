@@ -9,5 +9,9 @@ abstract class Media implements Comparable<Media> {
   public final Integer getSortKey() {
     return sortKey;
   }
+  
+  public void setSortKey(Integer sortKey) {
+    this.sortKey = sortKey;
+  }
 
 }
